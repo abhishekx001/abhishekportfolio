@@ -24,7 +24,6 @@ export default function RootLayout({ children }) {
         <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
-        <script src="https://cdn.tailwindcss.com"></script>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
