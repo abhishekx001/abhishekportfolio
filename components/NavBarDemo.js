@@ -1,7 +1,7 @@
 "use client";
 
 import { Home, User, Briefcase, FileText, Mail } from 'lucide-react';
-import { NavBar } from "@/components/NavBar.js";
+import { NavBar } from "@/components/ui/tubelight-navbar";
 
 export function NavBarDemo() {
   const navItems = [
