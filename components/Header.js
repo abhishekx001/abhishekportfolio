@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { NavBarDemo } from "./NavBarDemo.js";
 import { ButtonColorful } from "./ButtonColorful.js";
 
 export function Header() {
@@ -14,11 +13,6 @@ export function Header() {
             <h1 className="text-xl text-black" style={{ fontFamily: '"BBH Sans Bogle", sans-serif', fontWeight: '400', letterSpacing: '0.05em' }}>
               Abhishek S
             </h1>
-          </div>
-
-          {/* Centered Navigation */}
-          <div className="flex-1 flex justify-center">
-            <NavBarDemo />
           </div>
 
           {/* Resume Button */}

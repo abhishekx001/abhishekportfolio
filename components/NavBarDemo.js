@@ -1,16 +1,16 @@
 "use client";
 
 import { Home, User, Briefcase, FileText, Mail } from 'lucide-react';
-import { NavBar } from "@/components/NavBar.js";
+import { FloatingNav } from "@/components/FloatingNav.js";
 
 export function NavBarDemo() {
   const navItems = [
-    { name: 'Home', url: '#', icon: Home },
-    { name: 'About', url: '#', icon: User },
-    { name: 'Skills', url: '#', icon: FileText },
-    { name: 'Projects', url: '#', icon: Briefcase },
-    { name: 'Contact', url: '#', icon: Mail }
+    { name: 'Home', link: '#', icon: <Home size={18} /> },
+    { name: 'About', link: '#', icon: <User size={18} /> },
+    { name: 'Skills', link: '#', icon: <FileText size={18} /> },
+    { name: 'Projects', link: '#', icon: <Briefcase size={18} /> },
+    { name: 'Contact', link: '#', icon: <Mail size={18} /> }
   ];
 
-  return <NavBar items={navItems} />;
+  return <FloatingNav navItems={navItems} />;
 }
