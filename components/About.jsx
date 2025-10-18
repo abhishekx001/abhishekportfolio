@@ -51,14 +51,14 @@ export default function About() {
             font-size: 1rem !important;
           }
           .about-philosophy {
-            padding: 2rem !important;
-            margin: 0 0.5rem 0 1.5rem !important;
+            padding: 1rem !important;
+            margin: 0 1rem !important;
           }
           .about-philosophy-title {
-            font-size: 2rem !important;
+            font-size: 1.5rem !important;
           }
           .about-philosophy-text {
-            font-size: 1.125rem !important;
+            font-size: 0.8rem !important;
           }
         }
       `}</style>
