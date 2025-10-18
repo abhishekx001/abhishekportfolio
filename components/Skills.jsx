@@ -35,13 +35,32 @@ export default function Skills() {
   ];
 
   return (
-    <div style={{
-      width: '100%',
-      minHeight: '100vh',
-      background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%)',
-      padding: '5rem 2rem',
-      fontFamily: '"BBH Sans Bogle", sans-serif'
-    }}>
+    <>
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .skills-container {
+            padding: 3rem 0.5rem !important;
+          }
+          .skills-grid {
+            grid-template-columns: 1fr !important;
+            gap: 1.5rem !important;
+            margin: 0 0.5rem !important;
+          }
+          .skills-card {
+            margin: 0 !important;
+          }
+          .tech-buttons {
+            margin: 0 0.5rem !important;
+          }
+        }
+      `}</style>
+      <div className="skills-container" style={{
+        width: '100%',
+        minHeight: '100vh',
+        background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%)',
+        padding: '5rem 2rem',
+        fontFamily: '"BBH Sans Bogle", sans-serif'
+      }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
@@ -66,7 +85,7 @@ export default function Skills() {
         </div>
 
         {/* Skills Grid */}
-        <div style={{
+        <div className="skills-grid" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
           gap: '3rem',
@@ -74,7 +93,7 @@ export default function Skills() {
           columnGap: '3rem'
         }}>
           {skills.map((skill, index) => (
-            <div key={index} style={{
+            <div key={index} className="skills-card" style={{
               background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)',
               borderRadius: '16px',
               padding: '1.5rem',
@@ -153,7 +172,7 @@ export default function Skills() {
             Technologies I work with
           </h3>
           
-          <div style={{
+          <div className="tech-buttons" style={{
             display: 'flex',
             flexWrap: 'wrap',
             justifyContent: 'center',
@@ -197,6 +216,7 @@ export default function Skills() {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }
