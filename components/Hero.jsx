@@ -4,6 +4,19 @@ import { SplineScene } from "@/components/ui/splite";
 
 export default function Hero() {
   return (
+    <>
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .hero-robot-section {
+            display: none !important;
+          }
+          .hero-text-section {
+            flex: 1 !important;
+            max-width: 100% !important;
+            padding: 2rem 2rem 2rem 0.25rem !important;
+          }
+        }
+      `}</style>
     <div style={{ 
       width: '100%', 
       height: '100vh', 
@@ -14,7 +27,7 @@ export default function Hero() {
       overflow: 'hidden'
     }}>
       {/* Left content - Text and Buttons */}
-      <div style={{ 
+      <div className="hero-text-section" style={{ 
         flex: '1',
         padding: '2rem',
         display: 'flex',
@@ -100,7 +113,7 @@ export default function Hero() {
       </div>
 
       {/* Right content - Robot */}
-      <div style={{ 
+      <div className="hero-robot-section" style={{ 
         flex: '1',
         position: 'relative',
         height: '600px',
@@ -116,6 +129,7 @@ export default function Hero() {
         />
       </div>
     </div>
+    </>
   );
 }
 
