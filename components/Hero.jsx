@@ -7,13 +7,16 @@ export default function Hero() {
     <>
       <style jsx>{`
         @media (max-width: 768px) {
+          .hero-main-container {
+            padding: 0 0.5rem !important;
+          }
           .hero-robot-section {
             display: none !important;
           }
           .hero-text-section {
             flex: 1 !important;
             max-width: 100% !important;
-            padding: 0.25rem 2rem 2rem 0.25rem !important;
+            padding: 0.25rem 0.5rem 2rem 1rem !important;
           }
           .hero-hello-text {
             font-size: 0.9rem !important;
@@ -54,10 +57,10 @@ export default function Hero() {
           }
         }
       `}</style>
-    <div style={{ 
+    <div className="hero-main-container" style={{ 
       width: '100%', 
       height: '100vh', 
-      backgroundColor: 'red',
+      backgroundColor: 'green',
       display: 'flex',
       alignItems: 'center',
       padding: '0 2rem',
