@@ -39,18 +39,47 @@ export default function Skills() {
       <style jsx>{`
         @media (max-width: 768px) {
           .skills-container {
-            padding: 3rem 0.5rem !important;
+            padding: 3rem 0.75rem !important;
           }
           .skills-grid {
             grid-template-columns: 1fr !important;
             gap: 1.5rem !important;
-            margin: 0 0.5rem !important;
+            margin: 0 !important;
           }
           .skills-card {
             margin: 0 !important;
+            padding: 1rem !important;
+            max-width: 280px !important;
+            margin: 0 auto !important;
+          }
+          .skills-card h3 {
+            font-size: 1rem !important;
+          }
+          .skills-card p {
+            font-size: 0.8rem !important;
+          }
+          .skills-card .icon-container {
+            width: 2.5rem !important;
+            height: 2.5rem !important;
+          }
+          .skills-card .icon-container span {
+            font-size: 1.25rem !important;
           }
           .tech-buttons {
             margin: 0 0.5rem !important;
+            gap: 0.5rem !important;
+          }
+          .skills-title {
+            font-size: 2rem !important;
+          }
+          .tech-title {
+            font-size: 1.25rem !important;
+            margin-bottom: 2rem !important;
+          }
+          .tech-button {
+            padding: 0.5rem 1rem !important;
+            font-size: 0.8rem !important;
+            border-radius: 20px !important;
           }
         }
       `}</style>
@@ -64,7 +93,7 @@ export default function Skills() {
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-           <h2 style={{
+           <h2 className="skills-title" style={{
              fontSize: '3rem',
              fontWeight: '600',
              color: 'white',
@@ -112,7 +141,7 @@ export default function Skills() {
               e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
             }}>
               {/* Icon */}
-              <div style={{
+              <div className="icon-container" style={{
                 width: '3rem',
                 height: '3rem',
                 background: 'linear-gradient(135deg, #374151 0%, #4b5563 100%)',
@@ -160,7 +189,7 @@ export default function Skills() {
 
         {/* Technologies Section */}
         <div style={{ marginTop: '6rem' }}>
-          <h3 style={{
+          <h3 className="tech-title" style={{
             fontSize: '2.5rem',
             fontWeight: '500',
             color: 'white',
@@ -187,6 +216,7 @@ export default function Skills() {
             ].map((tech, index) => (
               <div
                 key={index}
+                className="tech-button"
                 style={{
                   backgroundColor: 'transparent',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
