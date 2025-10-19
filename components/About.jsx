@@ -13,16 +13,18 @@ export default function About() {
         
         @media (max-width: 768px) {
           .about-container {
-            padding: 2rem 0.5rem 2rem 0.25rem !important;
+            padding: 2rem 0.5rem 2rem 0 !important;
+            overflow-x: hidden !important;
           }
           .about-main-card {
-            margin: 0 1.5rem !important;
+            margin: 0 !important;
           }
           .about-header {
             padding: 2rem 1.5rem !important;
           }
           .about-content {
-            padding: 2rem 1.5rem !important;
+            padding: 2rem 0.5rem 2rem 1rem !important;
+            overflow-x: hidden !important;
           }
           .about-main-title {
             font-size: 2rem !important;
@@ -39,10 +41,14 @@ export default function About() {
           .about-grid {
             grid-template-columns: 1fr !important;
             gap: 1.5rem !important;
+            margin: 0 0 2rem 0 !important;
           }
           .about-card {
-            padding: 1.5rem !important;
-            margin: 0 1rem !important;
+            padding: 1rem !important;
+            margin: 0 !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            box-sizing: border-box !important;
           }
           .about-card-title {
             font-size: 1.25rem !important;
@@ -52,7 +58,7 @@ export default function About() {
           }
           .about-philosophy {
             padding: 1rem !important;
-            margin: 0 1rem !important;
+            margin: 0 !important;
           }
           .about-philosophy-title {
             font-size: 1.5rem !important;
