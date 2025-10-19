@@ -106,7 +106,7 @@ export default function About() {
               fontFamily: '"BBH Sans Bogle", sans-serif',
               letterSpacing: '0.05em'
             }}>
-              Full Stack Developer & Digital Creator
+              Full Stack Developer
             </p>
           </div>
 
