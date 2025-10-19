@@ -39,7 +39,7 @@ export default function Skills() {
       <style jsx>{`
         @media (max-width: 768px) {
           .skills-container {
-            padding: 3rem 0.75rem !important;
+            padding: 3rem 0.5rem !important;
           }
           .skills-grid {
             grid-template-columns: 1fr !important;
@@ -49,8 +49,7 @@ export default function Skills() {
           .skills-card {
             margin: 0 !important;
             padding: 1rem !important;
-            max-width: 280px !important;
-            margin: 0 auto !important;
+            max-width: 100% !important;
           }
           .skills-card h3 {
             font-size: 1rem !important;
