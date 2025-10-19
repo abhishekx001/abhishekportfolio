@@ -41,7 +41,7 @@ export default function Navbar() {
             top: 0 !important;
             right: 0 !important;
             width: 50vw !important;
-            height: 60vh !important;
+            height: 50vh !important;
             background-color: rgba(0, 0, 0, 0.95) !important;
             z-index: 9999 !important;
             justify-content: center !important;
@@ -80,6 +80,7 @@ export default function Navbar() {
             cursor: pointer !important;
             padding: 0.5rem !important;
             z-index: 10000 !important;
+            margin-right: 1rem !important;
           }
           .hamburger-line {
             width: 25px !important;
