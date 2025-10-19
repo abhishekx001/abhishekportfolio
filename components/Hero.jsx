@@ -57,7 +57,7 @@ export default function Hero() {
     <div style={{ 
       width: '100%', 
       height: '100vh', 
-      backgroundColor: 'white',
+      backgroundColor: 'red',
       display: 'flex',
       alignItems: 'center',
       padding: '0 2rem',
