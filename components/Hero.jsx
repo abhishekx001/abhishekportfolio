@@ -13,7 +13,7 @@ export default function Hero() {
           .hero-text-section {
             flex: 1 !important;
             max-width: 100% !important;
-            padding: 2rem 2rem 2rem 0.25rem !important;
+            padding: 0.25rem 2rem 2rem 0.25rem !important;
           }
         }
       `}</style>
