@@ -60,7 +60,7 @@ export default function Hero() {
     <div className="hero-main-container" style={{ 
       width: '100%', 
       height: '100vh', 
-      backgroundColor: 'yellow',
+      backgroundColor: 'white',
       display: 'flex',
       alignItems: 'center',
       padding: '0 2rem',
