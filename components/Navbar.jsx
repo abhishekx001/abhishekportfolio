@@ -14,11 +14,16 @@ export default function Navbar() {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       setIsScrolled(scrollTop > 50);
+      
+      // Auto-close mobile menu when scrolling
+      if (isMenuOpen) {
+        setIsMenuOpen(false);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isMenuOpen]);
 
   return (
     <>
