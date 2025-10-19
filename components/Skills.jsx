@@ -39,7 +39,7 @@ export default function Skills() {
       <style jsx>{`
         @media (max-width: 768px) {
           .skills-container {
-            padding: 3rem 0.5rem !important;
+            padding: 3rem 0.5rem 3rem 0 !important;
           }
           .skills-grid {
             grid-template-columns: 1fr !important;

@@ -8,7 +8,7 @@ export default function Hero() {
       <style jsx>{`
         @media (max-width: 768px) {
           .hero-main-container {
-            padding: 0 0.5rem !important;
+            padding: 0 0.5rem 0 0 !important;
           }
           .hero-robot-section {
             display: none !important;
@@ -60,7 +60,7 @@ export default function Hero() {
     <div className="hero-main-container" style={{ 
       width: '100%', 
       height: '100vh', 
-      backgroundColor: 'blue',
+      backgroundColor: 'yellow',
       display: 'flex',
       alignItems: 'center',
       padding: '0 2rem',
