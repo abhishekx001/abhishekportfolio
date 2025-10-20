@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { Raleway } from "next/font/google";
+import '@fontsource/bbh-sans-bartle';
+import '@fontsource/bbh-sans-bogle';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

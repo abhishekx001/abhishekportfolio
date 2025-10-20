@@ -10,6 +10,8 @@
     "tailwind": "tailwindcss -i ./app/globals.css -o ./public/tailwind.css --watch"
   },
   "dependencies": {
+    "@fontsource/bbh-sans-bartle": "^5.2.1",
+    "@fontsource/bbh-sans-bogle": "^5.2.1",
     "@radix-ui/react-menubar": "^1.1.16",
     "@react-three/drei": "^10.7.6",
     "@react-three/fiber": "^9.4.0",
