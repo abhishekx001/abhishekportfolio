@@ -20,7 +20,7 @@ export default function Navbar() {
 
   const downloadResume = () => {
     const link = document.createElement('a');
-    link.href = '/resume.pdf'; // Assuming the resume file is named resume.pdf in public folder
+    link.href = '/abhisheksresumefinal.pdf'; // Updated to match the actual file name
     link.download = 'Abhishek_Resume.pdf'; // This will be the downloaded filename
     document.body.appendChild(link);
     link.click();
