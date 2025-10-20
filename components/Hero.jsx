@@ -2,6 +2,13 @@
 
 import { SplineScene } from "@/components/ui/splite";
 
+const scrollToSection = (sectionId) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
 export default function Hero() {
   return (
     <>
@@ -132,6 +139,13 @@ export default function Hero() {
             letterSpacing: '0.08em',
             cursor: 'pointer',
             transition: 'all 0.2s'
+          }}
+          onClick={() => scrollToSection('contact')}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = '#333333';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = '#000000';
           }}>
             Get in touch
           </button>
@@ -147,6 +161,15 @@ export default function Hero() {
             letterSpacing: '0.08em',
             cursor: 'pointer',
             transition: 'all 0.2s'
+          }}
+          onClick={() => scrollToSection('projects')}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = '#000000';
+            e.currentTarget.style.color = '#ffffff';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = 'transparent';
+            e.currentTarget.style.color = '#000000';
           }}>
             View my work
           </button>
