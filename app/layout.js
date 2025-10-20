@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { Raleway } from "next/font/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -8,6 +9,13 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const raleway = Raleway({
+  variable: "--font-raleway",
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
 });
 
 export const metadata = {
@@ -24,9 +32,8 @@ export default function RootLayout({ children }) {
         <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`} style={{ margin: 0, padding: 0, overflowX: 'hidden' }}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${raleway.variable}`} style={{ margin: 0, padding: 0, overflowX: 'hidden' }}>
         {children}
       </body>
     </html>

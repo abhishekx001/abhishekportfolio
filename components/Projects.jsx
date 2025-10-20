@@ -40,7 +40,7 @@ export default function Projects() {
     <>
       <style jsx>{`
         .raleway-regular {
-          font-family: "Raleway", sans-serif;
+          font-family: var(--font-raleway), sans-serif;
           font-optical-sizing: auto;
           font-weight: 400;
           font-style: normal;
