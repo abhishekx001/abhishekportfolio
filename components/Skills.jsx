@@ -10,7 +10,7 @@ export default function Skills() {
     {
       icon: ">_",
       title: "Backend Development", 
-      description: "Building robust APIs with Node.js, Express, Python, Django, and FastAPI for scalable applications."
+      description: "Building robust APIs with Node.js, Express, Python, and Django for scalable applications."
     },
     {
       icon: "🌐",
@@ -20,7 +20,7 @@ export default function Skills() {
     {
       icon: "🗄️",
       title: "Database Management",
-      description: "Working with MongoDB, SQL databases, Firebase, and Supabase for efficient data storage solutions."
+      description: "Working with MongoDB, SQL databases, and Supabase for efficient data storage solutions."
     },
     {
       icon: "⚙️",
@@ -82,7 +82,7 @@ export default function Skills() {
           }
         }
       `}</style>
-      <div className="skills-container" style={{
+      <div id="skills" className="skills-container" style={{
         width: '100%',
         minHeight: '100vh',
         background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%)',
@@ -210,8 +210,8 @@ export default function Skills() {
           }}>
             {[
               'React.js', 'Node.js', 'Express.js', 'Mongo DB', 'Next.js', 'Three.js',
-              'Django', 'FastAPI', 'Python', 'Javascript', 'Supabase',
-              'Firebase', 'Figma', 'Flask', 'Tailwind CSS', 'Git'
+              'Django', 'Python', 'Javascript', 'Supabase',
+              'Figma', 'Tailwind CSS', 'Git'
             ].map((tech, index) => (
               <div
                 key={index}

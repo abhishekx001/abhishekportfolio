@@ -68,7 +68,7 @@ export default function About() {
           }
         }
       `}</style>
-      <div className="about-container" style={{
+      <div id="about" className="about-container" style={{
         width: '100%',
         minHeight: '100vh',
         background: 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)',

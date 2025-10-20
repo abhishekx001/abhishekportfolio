@@ -10,6 +10,24 @@ export default function Navbar() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
+  const downloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/resume.pdf'; // Assuming the resume file is named resume.pdf in public folder
+    link.download = 'Abhishek_Resume.pdf'; // This will be the downloaded filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    setIsMenuOpen(false);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -71,6 +89,21 @@ export default function Navbar() {
             padding: 0.5rem 0 !important;
             text-align: center !important;
             width: 100% !important;
+          }
+          .navbar-nav-items.mobile-open .navbar-resume-mobile {
+            font-size: 1.2rem !important;
+            color: white !important;
+            text-decoration: none !important;
+            font-weight: 300 !important;
+            letter-spacing: 0.08em !important;
+            display: block !important;
+            padding: 0.5rem 0 !important;
+            text-align: center !important;
+            width: 100% !important;
+            background: rgba(255, 255, 255, 0.1) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            border-radius: 8px !important;
+            margin-top: 1rem !important;
           }
           .navbar-logo {
             font-size: 1.2rem !important;
@@ -154,7 +187,7 @@ export default function Navbar() {
           transform: 'translateX(-50%)'
         }}>
           <li>
-            <a href="#about" className="navbar-nav-item" style={{
+            <a href="#" className="navbar-nav-item" style={{
               textDecoration: 'none',
               color: '#000000',
               fontSize: '1rem',
@@ -163,7 +196,10 @@ export default function Navbar() {
               cursor: 'pointer',
               transition: 'all 0.2s'
             }}
-            onClick={() => setIsMenuOpen(false)}
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('about');
+            }}
             onMouseEnter={(e) => {
               e.currentTarget.style.color = '#666666';
             }}
@@ -174,7 +210,7 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a href="#contact" className="navbar-nav-item" style={{
+            <a href="#" className="navbar-nav-item" style={{
               textDecoration: 'none',
               color: '#000000',
               fontSize: '1rem',
@@ -183,27 +219,10 @@ export default function Navbar() {
               cursor: 'pointer',
               transition: 'all 0.2s'
             }}
-            onClick={() => setIsMenuOpen(false)}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.color = '#666666';
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('skills');
             }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.color = '#000000';
-            }}>
-              Contact
-            </a>
-          </li>
-          <li>
-            <a href="#skills" className="navbar-nav-item" style={{
-              textDecoration: 'none',
-              color: '#000000',
-              fontSize: '1rem',
-              fontWeight: '400',
-              letterSpacing: '0.08em',
-              cursor: 'pointer',
-              transition: 'all 0.2s'
-            }}
-            onClick={() => setIsMenuOpen(false)}
             onMouseEnter={(e) => {
               e.currentTarget.style.color = '#666666';
             }}
@@ -214,7 +233,7 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a href="#projects" className="navbar-nav-item" style={{
+            <a href="#" className="navbar-nav-item" style={{
               textDecoration: 'none',
               color: '#000000',
               fontSize: '1rem',
@@ -223,7 +242,10 @@ export default function Navbar() {
               cursor: 'pointer',
               transition: 'all 0.2s'
             }}
-            onClick={() => setIsMenuOpen(false)}
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('projects');
+            }}
             onMouseEnter={(e) => {
               e.currentTarget.style.color = '#666666';
             }}
@@ -231,6 +253,75 @@ export default function Navbar() {
               e.currentTarget.style.color = '#000000';
             }}>
               Projects
+            </a>
+          </li>
+          <li>
+            <a href="#" className="navbar-nav-item" style={{
+              textDecoration: 'none',
+              color: '#000000',
+              fontSize: '1rem',
+              fontWeight: '400',
+              letterSpacing: '0.08em',
+              cursor: 'pointer',
+              transition: 'all 0.2s'
+            }}
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('experience');
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.color = '#666666';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.color = '#000000';
+            }}>
+              Experience
+            </a>
+          </li>
+          <li>
+            <a href="#" className="navbar-nav-item" style={{
+              textDecoration: 'none',
+              color: '#000000',
+              fontSize: '1rem',
+              fontWeight: '400',
+              letterSpacing: '0.08em',
+              cursor: 'pointer',
+              transition: 'all 0.2s'
+            }}
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('contact');
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.color = '#666666';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.color = '#000000';
+            }}>
+              Contact
+            </a>
+          </li>
+          <li>
+            <a href="#" className="navbar-resume-mobile" style={{
+              textDecoration: 'none',
+              color: '#000000',
+              fontSize: '1rem',
+              fontWeight: '400',
+              letterSpacing: '0.08em',
+              cursor: 'pointer',
+              transition: 'all 0.2s'
+            }}
+            onClick={(e) => {
+              e.preventDefault();
+              downloadResume();
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.color = '#666666';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.color = '#000000';
+            }}>
+              Resume
             </a>
           </li>
         </ul>
@@ -282,6 +373,7 @@ export default function Navbar() {
           flex: '0 0 auto',
           marginRight: '3rem'
         }}
+        onClick={downloadResume}
         onMouseEnter={(e) => {
           e.currentTarget.style.backgroundColor = '#333333';
         }}
